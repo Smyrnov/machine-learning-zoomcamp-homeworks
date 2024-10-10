@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('laptops.csv')
 df.columns = df.columns.str.lower().str.replace(' ', '_')
 
+
 # EDA Look at the final_price variable. Does it have a long tail?
 eda = df[['ram', 'storage', 'screen', 'final_price']]
 plt.figure(figsize=(8, 6))
@@ -15,6 +16,7 @@ plt.xlabel('Final Price')
 plt.ylabel('Frequency')
 # plt.show()
 print("Long tail\n")
+
 
 # Q1. There's one column with missing values. What is it?
 print("Q1. There's one column with missing values. What is it?")
@@ -56,9 +58,8 @@ del df_train['final_price']
 del df_val['final_price']
 del df_test['final_price']
 
+
 # Q3. Which option gives better RMSE?
-
-
 def prepare_X(df, mean=0):
     df_num = df.fillna(mean)
     X = df_num.values
@@ -109,6 +110,8 @@ elif result_fill_zero > result_fill_mean:
     print("Filling with mean is better\n")
 else:
     print("Both options are equal\n")
+
+
 # Q4. Which r gives the best RMSE?
 print("Q4. Which r gives the best RMSE?")
 
@@ -190,6 +193,7 @@ for seed_val in seeds:
 
 print(round(pd.DataFrame({"seed: ": seeds, "rmse: ": rmse_vals}), 2), "\n")
 print("Standard deviation: ", round(np.std(rmse_vals), 3), "\n")
+
 
 # Q6. What's the RMSE on the test dataset?
 print("Q6. What's the RMSE on the test dataset?")
