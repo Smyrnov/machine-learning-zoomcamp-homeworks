@@ -216,14 +216,10 @@ df_train_val = pd.concat([df_train, df_val]).reset_index(
 y_train_val = np.concatenate([y_train, y_val])
 
 df_test_v1 = df_test.fillna(0)
-
-# ready for model training
 X_full_train = df_train_val.values
 X_test1 = df_test_v1.values
 
-# to predict on the test set
 w0, w = train_linear_regression_reg(X_full_train, y_train_val, 0.001)
 y_test_pred1 = w0 + X_test1.dot(w)
-
 rmse_val = rmse(y_test_pred1, y_test)
 print("RMSE on the test dataset: ", rmse_val)
