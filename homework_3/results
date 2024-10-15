@@ -1,0 +1,39 @@
+Question 1
+
+The most frequent observation (mode) for the column education: secondary
+
+Question 2
+
+correlation matrix
+                age   balance       day  duration  campaign     pdays  previous
+age       1.000000  0.097783 -0.009120 -0.004648  0.004760 -0.023758  0.001288
+balance   0.097783  1.000000  0.004503  0.021560 -0.014578  0.003435  0.016674
+day      -0.009120  0.004503  1.000000 -0.030206  0.162490 -0.093044 -0.051710
+duration -0.004648  0.021560 -0.030206  1.000000 -0.084570 -0.001565  0.001203
+campaign  0.004760 -0.014578  0.162490 -0.084570  1.000000 -0.088628 -0.032855
+pdays    -0.023758  0.003435 -0.093044 -0.001565 -0.088628  1.000000  0.454820
+previous  0.001288  0.016674 -0.051710  0.001203 -0.032855  0.454820  1.000000
+
+Question 3
+
+Variable with the biggest mutual information score:  poutcome
+
+Question 4
+
+Accuracy:  0.9
+
+Question 5
+
+All results:  {'job': 0.001548330015483268, 'marital': 0.00011059500110588427, 'education': 0.0008847600088475183, 'housing': 0.0, 'contact': 0.0018801150188011428, 'month': 0.0005529750055297544, 'poutcome': 0.011059500110594978}
+
+Original Accuracy:  0.9014598540145985
+All results:  {'job': 0.001548330015483268, 'marital': 0.00011059500110588427, 'education': 0.0008847600088475183, 'contact': 0.0018801150188011428, 'month': 0.0005529750055297544, 'poutcome': 0.011059500110594978}
+
+Smallest difference: marital 0.00011059500110588427
+Question 6
+
+All results:  {0.01: 0.899, 0.1: 0.9, 1: 0.901, 10: 0.901, 100: 0.901}
+
+best accuracy on the validation set:
+
+1 0.901
